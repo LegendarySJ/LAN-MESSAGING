@@ -4,8 +4,6 @@ In the realm of network communication, client-server architecture is a fundament
 Client-Server Communication:
 In a client-server architecture, multiple clients connect to a central server, which coordinates communication between them. The server acts as a mediator, receiving and dispatching messages among clients. Each client establishes a socket connection with the server through a designated port on the server machine.
 
-Cryptography for Security:
-For privacy and security, our chat application employs AES (Advanced Encryption Standard) encryption. AES is a symmetric-key encryption algorithm widely used for its efficiency and reliability. It utilizes a shared secret key between communicating parties for encrypting and decrypting messages, ensuring confidentiality and integrity.
 
 Code Structure:
 
@@ -37,5 +35,7 @@ This chat application exemplifies the client-server model's versatility, offerin
 To enable client-to-client messaging in a client-server architecture, the server act as a mediator, relaying messages between clients. 
 
 Client-to-Server Communication: Clients send messages to the server with the intended recipient's name prefixed to the message. For example, @recipient_name message_content.
+
+If the messaage is sent with "#message_content the message" is forwarded to all the clients connected to the server.
 
 Server Logic: The server receives messages from clients, parses them to determine the recipient, and forwards the message to the appropriate client.
