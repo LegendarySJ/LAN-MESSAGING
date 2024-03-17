@@ -18,6 +18,12 @@ def receive_messages(client_socket, client_name):
                         recipient_socket.send(f"{client_name}: {message}".encode())
                     else:
                         client_socket.send("Error: Recipient not found.".encode())
+                # Check if message is intended for all clients
+                elif data.startswith("#"):
+                    message = data[1:]
+                    for name, sock in client_sockets.items():
+                        if name != client_name:  # Exclude sender
+                            sock.send(f"{client_name}: {message}".encode())
                 else:
                     print(f"{client_name}: {data}")
         except Exception as e:
