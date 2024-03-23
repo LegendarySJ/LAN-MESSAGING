@@ -39,6 +39,6 @@ The server2.py  and client2.py files are the updated version of server.py and cl
 
 Client-to-Server Communication: Clients send messages to the server with the intended recipient's name prefixed to the message. For example, @recipient_name message_content.
 
-If the messaage is sent with "#message_content the message" is forwarded to all the clients connected to the server.
+If the messaage is sent with "#message_content the message" is forwarded to all the clients connected to the server, not works in GUI.
 
 Server Logic: The server receives messages from clients, parses them to determine the recipient, and forwards the message to the appropriate client.
