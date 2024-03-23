@@ -34,7 +34,8 @@ This chat application exemplifies the client-server model's versatility, offerin
 
 To enable client-to-client messaging in a client-server architecture, the server act as a mediator, relaying messages between clients. 
 
-The s1.py  and c1.py files are the updated version of server.py and client.py respectively and have an added XOR encryption for security.
+The server1.py  and client1.py files are the updated version of server.py and client.py respectively and have an added XOR encryption for security.
+The server2.py  and client2.py files are the updated version of server.py and client.py respectively and have an added GUI using Tkinter.
 
 Client-to-Server Communication: Clients send messages to the server with the intended recipient's name prefixed to the message. For example, @recipient_name message_content.
 
